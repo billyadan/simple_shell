@@ -13,14 +13,14 @@ char **indicator(char *line)
 	int tokensize = 1;
 	size_t index = 0, flag = 0;
 
-	buf = _strdup(line);
+	buf = _dupstr(line);
 	if (!buf)
 		return (NULL);
 	bufp = buf;
 
 	while (*bufp)
 	{
-		if (_strchr(delim, *bufp) != NULL && flag == 0)
+		if (_chrstr(delim, *bufp) != NULL && flag == 0)
 		{
 			tokensize++;
 			flag = 1;
@@ -33,7 +33,7 @@ char **indicator(char *line)
 	token = strtok(buf, delim);
 	while (token)
 	{
-		tokens[index] = _strdup(token);
+		tokens[index] = _dupstr(token);
 		if (tokens[index] == NULL)
 		{
 			free(tokens);

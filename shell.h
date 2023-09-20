@@ -22,8 +22,8 @@ int apraiser(char **cmd, char *buf);
 void prompt_consumer(void);
 void handle_indication(int z);
 char **indicator(char *line);
-char *pathway_test(char **path, char *command);
-char *attach_path(char *path, char *command);
+char *pathway_test(char **pathway, char *command);
+char *attach_pathway(char *pathway, char *command);
 int handle_inherent(char **command, char *line);
 void escape_cmd(char **command, char *line);
 
