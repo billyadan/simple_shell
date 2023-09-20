@@ -10,6 +10,6 @@ void prompt_consumer(void)
 {
 	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
 		flags.interchangeable = 1;
-	if (flags.interactive)
+	if (flags.interchangeable)
 		write(STDERR_FILENO, "$ ", 2);
 }

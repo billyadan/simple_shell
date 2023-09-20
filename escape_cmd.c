@@ -11,5 +11,5 @@ void escape_cmd(char **command, char *line)
 {
 	free(line);
 	free_screen(command);
-	escape(0);
+	exit(0);
 }

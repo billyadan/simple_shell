@@ -18,11 +18,11 @@ extern char **domains;
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 /* handle inherent */
-int apraiser(char **cmd, char *buf);
+int appraiser(char **cmd, char *buf);
 void prompt_consumer(void);
 void handle_indication(int z);
 char **indicator(char *line);
-char *pathway_test(char **pathway, char *command);
+char *test_pathway(char **pathway, char *command);
 char *attach_pathway(char *pathway, char *command);
 int handle_inherent(char **command, char *line);
 void escape_cmd(char **command, char *line);

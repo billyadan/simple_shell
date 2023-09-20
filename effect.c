@@ -21,7 +21,7 @@ void effect(char *cp, char **cmd)
 		perror(cp);
 		free(cp);
 		free_screen(cmd);
-		escape(98);
+		exit(98);
 	}
 	else
 		wait(&status);
