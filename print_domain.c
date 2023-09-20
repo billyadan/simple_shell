@@ -12,7 +12,7 @@ void print_domain(void)
 
 	while (domain[y])
 	{
-		write(STDOUT_FILENO, (const void *)domain[y], _lenstr(domain[y]));
+		write(STDOUT_FILENO, (const void *)domain[y], _strlen(domain[y]));
 		write(STDOUT_FILENO, "\n", 1);
 		x++;
 	}

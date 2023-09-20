@@ -11,12 +11,12 @@ int handle_inherent(char **command, char *line)
 {
 	struct inherent inherent = {"domain", "escape"};
 
-	if (_cmpstr(*command, inherent.domain) == 0)
+	if (_strcmp(*command, inherent.domain) == 0)
 	{
 		print_domain();
 		return (1);
 	}
-	else if (_cmpstr(*command, inherent.escape) == 0)
+	else if (_strcmp(*command, inherent.escape) == 0)
 	{
 		escape_cmd(command, line);
 		return (1);

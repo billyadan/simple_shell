@@ -19,7 +19,7 @@ char *attach_pathway(char *pathway, char *command)
 	if (pathway == 0)
 		pathway = "";
 
-	buf = malloc(sizeof(char) * (_lenstr(pathway) + _lenstr(command) + 2));
+	buf = malloc(sizeof(char) * (_strlen(pathway) + _strlen(command) + 2));
 	if (!buf)
 		return (NULL);
 
