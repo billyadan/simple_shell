@@ -37,7 +37,7 @@ char *_strdup(char *s);
 char *_strchr(char *s, char c);
 
 void effect(char *cp, char **cmd);
-char *find_path(void);
+char *find_pathway(void);
 
 /* helper function for efficient free */
 void free_screen(char **buf);

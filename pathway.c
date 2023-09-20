@@ -11,7 +11,7 @@ char *find_pathway(void)
 
 	while (*domain)
 	{
-		if (_strncmp(*pathway, "PATH=", 5) == 0)
+		if (_strncmp(*domain, "PATH=", 5) == 0)
 		{
 			pathway = *domain;
 			while (*pathway && y < 5)
