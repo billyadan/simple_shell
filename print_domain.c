@@ -8,7 +8,7 @@
 void print_domain(void)
 {
 	int y = 0;
-	char **domain = domains;
+	char **domain = environ;
 
 	while (domain[y])
 	{

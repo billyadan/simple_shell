@@ -7,7 +7,7 @@
 char *find_pathway(void)
 {
 	int y;
-	char **domain = domains, *pathway = NULL;
+	char **domain = environ, *pathway = NULL;
 
 	while (*domain)
 	{

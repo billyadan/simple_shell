@@ -10,7 +10,7 @@ void effect(char *cp, char **cmd)
 {
 	pid_t child_pid;
 	int status;
-	char **domain = domains;
+	char **domain = environ;
 
 	child_pid = fork();
 	if (child_pid < 0)
