@@ -15,7 +15,7 @@ char *test_pathway(char **pathway, char *command)
 
 	while (pathway[i])
 	{
-		output = attach_path(pathway[i], command);
+		output = attach_pathway(pathway[i], command);
 		if (access(output, F_OK | X_OK) == 0)
 			return (output);
 		free(output);
