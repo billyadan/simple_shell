@@ -8,7 +8,7 @@
 * Return: buffer containing command with pathway on success
 * NULL on failure
 */
-char *attach_pathway(char *pathway, char *command)
+char *append_path(char *path, char *command)
 {
 	char *buf;
 	size_t i = 0, j = 0;
@@ -16,20 +16,20 @@ char *attach_pathway(char *pathway, char *command)
 	if (command == 0)
 		command = "";
 
-	if (pathway == 0)
-		pathway = "";
+	if (path == 0)
+		path = "";
 
-	buf = malloc(sizeof(char) * (_strlen(pathway) + _strlen(command) + 2));
+	buf = malloc(sizeof(char) * (_strlen(path) + _strlen(command) + 2));
 	if (!buf)
 		return (NULL);
 
-	while (pathway[i])
+	while (path[i])
 	{
-		buf[i] = pathway[i];
+		buf[i] = path[i];
 		i++;
 	}
 
-	if (pathway[i - 1] != '/')
+	if (path[i - 1] != '/')
 	{
 		buf[i] = '/';
 		i++;

@@ -18,7 +18,7 @@ int _putchar(char c)
 *
 * Return: number of characters printed
 */
-int print_string(char *s)
+int print_s(char *s)
 {
 	int i = 0;
 

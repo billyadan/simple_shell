@@ -5,15 +5,15 @@
 *
 * Return: 0
 */
-void print_domain(void)
+void print_env(void)
 {
-	int y = 0;
-	char **domain = environ;
+	int x = 0;
+	char **env = environ;
 
-	while (domain[y])
+	while (env[x])
 	{
-		write(STDOUT_FILENO, (const void *)domain[y], _strlen(domain[y]));
+		write(STDOUT_FILENO, (const void *)env[x], _strlen(env[x]));
 		write(STDOUT_FILENO, "\n", 1);
-		y++;
+		x++;
 	}
 }

@@ -6,21 +6,21 @@
  *@cmd:vector array of pointers to commands
  * Return: 0
  */
-void effect(char *cp, char **cmd)
+void execution(char *cp, char **cmd)
 {
 	pid_t child_pid;
 	int status;
-	char **domain = environ;
+	char **env = environ;
 
 	child_pid = fork();
 	if (child_pid < 0)
 		perror(cp);
 	if (child_pid == 0)
 	{
-		execve(cp, cmd, domain);
+		execve(cp, cmd, env);
 		perror(cp);
 		free(cp);
-		free_screen(cmd);
+		free_buffers(cmd);
 		exit(98);
 	}
 	else

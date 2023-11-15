@@ -7,18 +7,19 @@
 *
 * Return: 1 if executed, 0 if not
 */
-int handle_inherent(char **command, char *line)
-{
-	struct inherent inherent = {"domain", "escape"};
 
-	if (_strcmp(*command, inherent.domain) == 0)
+int handle_builtin(char **command, char *line)
+{
+	struct builtin builtin = {"env", "exit"};
+
+	if (_strcmp(*command, builtin.env) == 0)
 	{
-		print_domain();
+		print_env();
 		return (1);
 	}
-	else if (_strcmp(*command, inherent.escape) == 0)
+	else if (_strcmp(*command, builtin.exit) == 0)
 	{
-		escape_cmd(command, line);
+		exit_cmd(command, line);
 		return (1);
 	}
 	return (0);

@@ -2,26 +2,26 @@
 
 /**
 * find_pathway - finds the path from the global enviroment
-* Return: NULL if pathway is not found or pathway is found.
+* Return: NULL if pathway is not found or pathway is found
 */
-char *find_pathway(void)
+char *find_path(void)
 {
-	int y;
-	char **domain = environ, *pathway = NULL;
+	int x;
+	char **env = environ, *path = NULL;
 
-	while (*domain)
+	while (*env)
 	{
-		if (_strncmp(*domain, "PATH=", 5) == 0)
+		if (_strncmp(*env, "PATH=", 5) == 0)
 		{
-			pathway = *domain;
-			while (*pathway && y < 5)
+			path = *env;
+			while (*path && x < 5)
 			{
-				pathway++;
-				y++;
+				path++;
+				x++;
 			}
-			return (pathway);
+			return (path);
 		}
-		domain++;
+		env++;
 	}
 	return (NULL);
 }

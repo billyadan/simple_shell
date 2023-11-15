@@ -6,7 +6,7 @@
 *
 * Return: no return
 */
-void free_screen(char **buf)
+void free_buffers(char **buf)
 {
 	int i = 0;
 

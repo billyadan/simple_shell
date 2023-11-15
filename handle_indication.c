@@ -6,9 +6,10 @@
  *Return: nothing
  */
 
-void handle_indication(int z)
+
+void handle_signal(int m)
 {
-	(void)z;
+	(void)m;
 	write(STDERR_FILENO, "\n", 1);
 	write(STDERR_FILENO, "$ ", 2);
 }

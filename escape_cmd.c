@@ -7,9 +7,9 @@
 *
 * Return: no return
 */
-void escape_cmd(char **command, char *line)
+void exit_cmd(char **command, char *line)
 {
 	free(line);
-	free_screen(command);
+	free_buffers(command);
 	exit(0);
 }

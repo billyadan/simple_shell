@@ -18,16 +18,16 @@ extern char **environ;
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 /* handle inherent */
-int appraiser(char **cmd, char *buf);
-void prompt_consumer(void);
-void handle_indication(int z);
-char **indicator(char *line);
-char *test_pathway(char **pathway, char *command);
-char *attach_pathway(char *pathway, char *command);
-int handle_inherent(char **command, char *line);
-void escape_cmd(char **command, char *line);
+int checker(char **cmd, char *buf);
+void prompt_user(void);
+void handle_signal(int m);
+char **tokenizer(char *line);
+char *test_path(char **path, char *command);
+char *append_path(char *path, char *command);
+int handle_builtin(char **command, char *line);
+void exit_cmd(char **command, char *line);
 
-void print_domain(void);
+void print_env(void);
 
 /* string handlers */
 int _strcmp(char *s1, char *s2);
@@ -36,27 +36,27 @@ int _strncmp(char *s1, char *s2, int n);
 char *_strdup(char *s);
 char *_strchr(char *s, char c);
 
-void effect(char *cp, char **cmd);
-char *find_pathway(void);
+void execution(char *cp, char **cmd);
+char *find_path(void);
 
 /* helper function for efficient free */
-void free_screen(char **buf);
+void free_buffers(char **buf);
 
-struct inherent
+struct builtin
 {
-	char *domain;
-	char *escape;
-} inherent;
+	char *env;
+	char *exit;
+} builtin;
 
 struct info
 {
-	int final_escape;
+	int final_exit;
 	int ln_count;
 } info;
 
 struct flags
 {
-	bool interchangeable;
+	bool interactive;
 } flags;
 
 #endif

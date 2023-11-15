@@ -6,7 +6,7 @@
 *
 * Return: array of strings
 */
-char **indicator(char *line)
+char **tokenizer(char *line)
 {
 	char *buf = NULL, *bufp = NULL, *token = NULL, *delim = " :\t\r\n";
 	char **tokens = NULL;
